@@ -12,8 +12,8 @@ class Stack : public LinkedList {
 
 public:
     Stack(); //default constructor
-    void push_head(Data& da);
-    bool pop_head(Data& da);
+    void push_head(Data& a);
+    bool pop_head(Data& a);
 
 };
 

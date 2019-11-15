@@ -22,10 +22,10 @@ public:
 
 private:
     string country;
-    double happinessRank;
-    double happinessScore;
-    double GDPperCapita;
-    double lifeExpectancy;
+    double Rank;
+    double Score;
+    double GDP;
+    double Expectancy;
 
 };
 

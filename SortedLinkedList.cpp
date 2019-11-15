@@ -11,23 +11,19 @@ void SortedLinkedList::insertSorted(Data &a) {
     Node *newData = new Node(a);
     if (head == nullptr) {
         head = newData;
-        //if not empty all of the below is run to insert the node in the new location
-    } else {
+    }
+    else {
         Node *current = head;
         Node *previous = nullptr;
-
-        //current->data > newData->data
         if (newData->data < current->data) {
             newData->next = head;
             head = newData;
             return;
         }
-        //keeps searching for the correct location and going through the list
         previous = current;
         current = current->next;
 
         while (current) {
-            //newData->data > current->data
             if (current->data < newData->data) {
                 previous = current;
                 current = current->next;

@@ -7,37 +7,36 @@
 
 using namespace std;
 
-//creates a default constructor for the data
+// default constructor
 Data::Data() {
-    country = "";
-    happinessRank = 0.0;
-    happinessScore = 0.0;
-    GDPperCapita = 0.0;
-    lifeExpectancy = 0.0;
+    country = " ";
+    Rank = 0.0;
+    Score = 0.0;
+    GDP = 0.0;
+    Expectancy = 0.0;
 }
-//creates an alternate constructor for when the data is inputted through parameters
-Data::Data(string c, double r, double s, double g, double l) {
-    country = c;
-    happinessRank = r;
-    happinessScore = s;
-    GDPperCapita = g;
-    lifeExpectancy = l;
+
+Data::Data(string a, double b, double c, double d, double e) {
+    country = a;
+    Rank = b;
+    Score = c;
+    GDP = d;
+    Expectancy = e;
 
 }
 
-//overloads the outstream operator
-ostream& operator<<(ostream& os, const Data& pr) {
-    os << pr.country << ": " << pr.happinessRank<< ", " << pr.happinessScore<< "," << pr.GDPperCapita << ", "<< pr.lifeExpectancy;
+
+ostream& operator<<(ostream& os, const Data& x) {
+    os << x.country << ": " << x.Rank<< ", " << x.Score<< "," << x.GDP << ", "<< x.Expectancy;
     return os;
 }
 
-//overloads < operator for happiness rank? maybe GDPperCapita
-bool Data:: operator < (Data& hr){
-    //return this->GDPperCapita < hr.GDPperCapita;
-    if (this->GDPperCapita > hr.GDPperCapita){
+
+bool Data:: operator < (Data& y){
+    if (this->GDP > y.GDP){
         return false;
     }
-    else if (this->GDPperCapita < hr.GDPperCapita){
+    else if (this->GDP < y.GDP){
         return true;
     }
     else{
@@ -46,10 +45,7 @@ bool Data:: operator < (Data& hr){
 }
 
 
-bool Data::operator>=(Data& hr) {
-    return this->GDPperCapita>hr.GDPperCapita;
+bool Data::operator>=(Data& y) {
+    return this->GDP>y.GDP;
 }
 
-bool Data::operator>(Data& hr) {
-    return this->GDPperCapita>hr.GDPperCapita;
-}

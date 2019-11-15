@@ -14,7 +14,6 @@ public:
 
 private:
     Node* tail;
-    //Node* front;
 
 };
 

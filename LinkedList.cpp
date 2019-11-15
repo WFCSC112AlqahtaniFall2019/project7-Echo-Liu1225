@@ -10,31 +10,28 @@
 #include "LinkedList.h"
 using namespace std;
 
-//constructor
+//default constructor
 LinkedList::LinkedList() {
-    head = nullptr; // empty list
+    head = nullptr;
 }
 
 // copy constructor
 LinkedList::LinkedList(const LinkedList& list) {
-    // if list is not empty, perform deep copy
     if(list.head) {
         Node *curr, *listcurr;
-        // copy head node data
         head = curr = new Node(list.head->data);
         listcurr = list.head->next;
-        // loop over rest of nodes, copying data
         while (listcurr != nullptr) {
             curr = curr->next = new Node(listcurr->data);
             listcurr = listcurr->next;
         }
-    } else {
-        // if list is empty, create another empty list
+    }
+    else {
         head = nullptr;
     }
 }
 
-// assignment operator (use copy and swap)
+// assignment operator
 const LinkedList& LinkedList::operator=(LinkedList rhs) {
     swap(head,rhs.head);
     return *this;
@@ -65,14 +62,3 @@ LinkedList::~LinkedList() {
         pop_head();
     }
 }
-
-    else {
-        Node *curr = head;
-        while (curr->next != nullptr) {
-            curr = curr->next;
-        }
-
-        curr ->next = new Node (d);
-
-    }
-
