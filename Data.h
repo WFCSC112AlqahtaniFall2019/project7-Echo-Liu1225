@@ -13,11 +13,11 @@ using namespace std;
 class Data {
 public:
     Data ();
-    Data(string c, double r, double s, double g, double l);
-    friend ostream& operator<<(ostream& os, const Data& pr);
-    bool operator >= (Data& hr);
-    bool operator < (Data& hr);
-    bool operator > (Data& hr);
+    Data(string a, double b, double c, double d, double e);
+    friend ostream& operator<<(ostream& os, const Data& x);
+    bool operator >= (Data& y);
+    bool operator < (Data& y);
+    bool operator > (Data& y);
 
 
 private:

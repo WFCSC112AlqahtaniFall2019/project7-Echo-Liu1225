@@ -22,7 +22,7 @@ int main() {
     ofstream aQueue;
     ofstream outSorted;
 
-    in.open ("../WorldHappiness2015.csv");
+    in.open ("../2015.csv");
     aStack.open("Stack.txt");
     aQueue.open("Queue.txt");
     outSorted.open("Sorted.txt");
@@ -87,7 +87,7 @@ int main() {
     aQueue.close();
     outSorted.close();
     aStack.close();
-    cout<<"All files are closed!"<<endl;
+    cout<<"All files are closed."<<endl;
 
 
     return 0;

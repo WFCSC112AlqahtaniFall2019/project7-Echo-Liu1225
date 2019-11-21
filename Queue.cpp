@@ -10,7 +10,7 @@ Queue::Queue() {
     //front = nullptr;
 }
 
-//takes in a Data object and creates a Node pointer and then inserts it at the end of the list.
+//get in a data object
 void Queue::enqueue_tail(Data da) {
     Node* temp = new Node(da);
     //if the list is empty
@@ -25,7 +25,7 @@ void Queue::enqueue_tail(Data da) {
     }
 }
 
-//Removes a Data object pointed to by the head pointer and returns true if list is full or false if empty
+//remove the data object
 bool Queue::dequeue_head() {
     Node* del = head;
     if(head!= nullptr){
