@@ -22,7 +22,7 @@ int main() {
     ofstream aQueue;
     ofstream outSorted;
 
-    in.open ("../2015.csv");
+    in.open ("../2017.csv");
     aStack.open("Stack.txt");
     aQueue.open("Queue.txt");
     outSorted.open("Sorted.txt");
